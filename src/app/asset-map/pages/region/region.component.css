@@ -1,0 +1,22 @@
+.info{
+    width: 200px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+hr {
+     display: block;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+} 
+.rowBox_withOutBorderTop {
+    border-radius: var(--rowBox-border-radius);
+    -webkit-box-shadow: var(--rowBox-webkit-box-shadow);
+    box-shadow: var(--rowBox-box-shadow);
+    border-top-left-radius: var(--rowBox-border-top-left-radius);
+    border-top-right-radius: var(--rowBox-border-top-right-radius);
+    border: solid 1px var(--form-rowBox-border-color);
+    background-color: var(--form-rowBox-bg-color);
+   border-top: solid 1px rgb(223, 221, 221);
+  }

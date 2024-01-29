@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-lg-3 col-md-3">
+        <div class="row margin_0px rowBox margin_top_5px">
+            <div class="col-md-12 padding_0px">
+                <div class="panel panel-inverse position-relative" style="margin-bottom: 0px;">
+                    <app-panel-user name="List of Assets" #panelHeader>
+                        <div>
+                            <div *ngIf="showLoaderImage" class="col-lg-12" style="margin-left:0%; margin-top:0%;margin-bottom:0%;"
+                                    text-align="center">
+                                <img src="/assets/img/dashboard/ProgressLoader.gif" height="auto" width="50%" alt="Loading........">
+                            </div>
+                            
+                           <div id='treeelement' *ngIf="getDataSource?.length" class="ps position-relative treeelement" 
+                            appScrollbarDirective>
+                                <ng-container>
+                                    
+                                <ejs-treeview #treeview="" (nodeSelected)='onClickAsset($event)' [fields]='field'
+                                [allowMultiSelection]='allowMultiSelection' >
+                                    
+                                </ejs-treeview>
+                                </ng-container>
+            
+                            </div>
+
+                        </div>
+                    </app-panel-user>
+                </div>
+               
+            </div>                
+        </div>            
+    </div>  
+
+    <div class="col-lg-9 col-md-9 pl-0">
+        <app-asset-list-map [childAssetName]="assetname" [childTotalMarkerIdx]="markercount" [childAgmMap]="agmMap" [childlatlngBounds]="latlngBounds"
+        [totalLabelName]="totalLabelName" [childtypeCode]="typeCode"  [childViewModeData]="markersArray"></app-asset-list-map>
+    </div>   
+      
+</div>

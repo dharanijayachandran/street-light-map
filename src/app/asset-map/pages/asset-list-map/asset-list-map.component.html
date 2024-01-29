@@ -1,0 +1,35 @@
+<div class="row">
+   <div class="col-lg-12 col-md-12">
+      <div class="row margin_0px rowBox margin_top_5px">
+         <div class="col-md-12 padding_0px">
+            <div class="panel panel-inverse position-relative" style="margin-bottom: 0px;">
+               <div class="row">
+                  <div class="col-lg-9">
+                     <div class="row">
+                        <div class="totalcode">
+                           Name:
+                        </div>
+                        <h6 class="lefttopcorner">{{assetname}}</h6>
+                     </div>
+                  </div>
+                  <div class="col-lg-3">
+                     <div class="row">
+                        <div class="totalcode">
+                           Total {{totalLabelName}}(s):&nbsp;&nbsp;
+                        </div>
+                        <div class="total">
+                           <h2> {{markercount}}</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+               <agm-map [latitude]="12.9716" [longitude]="77.5946" [mapTypeControl]='true'
+                [zoomControl]="true" #agmMap [zoom]="4" [fitBounds]="bounds">
+               <street-light-map-slp [markerData]="markersArray" ></street-light-map-slp>
+               </agm-map>
+            </div>
+      </div>
+   </div>
+
+</div>

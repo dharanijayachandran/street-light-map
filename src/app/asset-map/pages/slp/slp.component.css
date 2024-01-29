@@ -1,0 +1,23 @@
+.info{
+    width: 310px;
+    padding: 10px;
+}
+.rowBox_withOutBorderTop {
+    border-radius: var(--rowBox-border-radius);
+    -webkit-box-shadow: var(--rowBox-webkit-box-shadow);
+    box-shadow: var(--rowBox-box-shadow);
+    border-top-left-radius: var(--rowBox-border-top-left-radius);
+    border-top-right-radius: var(--rowBox-border-top-right-radius);
+    border: solid 1px var(--form-rowBox-border-color);
+    background-color: var(--form-rowBox-bg-color);
+    border-top: solid 1px cornsilk;
+  }
+  td{
+      padding: 6px;
+      white-space:nowrap;
+  }
+  .scroller {
+    width: 300px;
+    height: auto;
+  }
+  

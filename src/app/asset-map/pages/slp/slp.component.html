@@ -1,0 +1,90 @@
+<div *ngFor="let marker of markers">
+      <div *ngIf="undefined!=marker">
+      <agm-marker [latitude]="marker.lat" [longitude]="marker.lng"
+         [visible]="marker.visible" [iconUrl]="marker.iconURL"  (markerClick)="clickedMarker(infowindow)">
+         <agm-info-window 
+         [maxWidth]="300" maxHeight="500px" padding="13px" borderRadius="11px" 
+           #infowindow >
+            <div class="scroller"  >
+   <div class="row">
+      <div class="col-lg-12">
+         <ngb-tabset type="pills">
+            <ngb-tab id="summary">
+               <ng-template ngbTabTitle>
+                  <span class="d-sm-none">SUMMARY</span>
+                  <span class="d-sm-block d-none">SUMMARY</span>
+               </ng-template>
+               <ng-template ngbTabContent>
+                  <div class="rowBox_withOutBorderTop custom-rounded-bottom">
+                     <div class="info">
+                           <table>
+                              <tr>
+                                 <td> Name</td> <td>:</td>
+                                 <strong><a href='#/assets/pages/asset-details?id={{marker.assetId}}&typeCode=SLP' 
+                                    data-toggle="tooltip" data-placement="top" title="Click to view details"><td>{{marker.name}}</td></a></strong>
+                              </tr>
+                              <tr>
+                                 <td>Latitude</td>  <td>:</td>
+                                 <strong><td>{{marker.lat}}</td></strong>
+                              </tr>
+                              <tr>
+                                 <td>Longitude</td>  <td>:</td>
+                                <strong><td>{{marker.lng}} </td></strong> 
+                              </tr>
+                              <tr>   
+                                    <td>Status</td> <td>:</td>
+                                   <strong><td>{{marker.lightStatus| hyphen}}</td></strong>
+                                 </tr>   
+                                 <tr>
+                                    <td>Status Time</td> <td>:</td>
+                                   <strong><td>{{marker.lightStatusTime| hyphen}}</td></strong> 
+                                 </tr>
+                                 <tr>
+                                    <td>No of Lights</td>  <td>:</td>
+                                       <strong><td>{{marker.lightCount | hyphen}}</td></strong> 
+                                 </tr>  
+                                 <tr>
+                                    <td>Light Brand/Driver</td> <td>:</td>
+                                   <strong><td>{{marker.lightBrandOrDriver | hyphen}}</td></strong> 
+                                 </tr>
+                                 <tr>
+                                    <td>Light Watt</td> <td>:</td>
+                                   <strong><td>{{marker.lightWatt | hyphen}}</td></strong> 
+                                 </tr>
+                                 <tr>
+                                    <td>Light Contract</td> <td>:</td>
+                                   <strong><td>{{marker.contract | hyphen}}</td></strong> 
+                                 </tr>
+                           </table>
+                     </div>
+                  </div>
+               </ng-template>
+            </ngb-tab>
+         </ngb-tabset>
+      </div>
+   </div>
+</div>
+         </agm-info-window>
+      </agm-marker>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

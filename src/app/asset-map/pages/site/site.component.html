@@ -1,0 +1,38 @@
+<div *ngFor="let markerList of markers">
+   <div *ngFor="let marker of markerList">
+      <agm-marker [agmFitBounds]="true" [latitude]="marker.lat" [longitude]="marker.lng"
+         [visible]="marker.visible" [agmFitBounds]="true" 
+         [iconUrl]="marker.iconURL"   (markerClick)="clickedMarker(infowindow)">
+         <agm-info-window 
+         [maxWidth]="300" maxHeight="500px" padding="13px" borderRadius="11px" 
+           #infowindow >
+           <div class="rowBox_withOutBorderTop custom-rounded-bottom">
+               <div class="info">
+                       <table>
+                          <div class="site-row">
+                          <tr><td>Site Name</td></tr>
+                          <strong><tr><td>{{marker.Name}}</td></tr></strong>
+                        </div>
+                        <div class="site-row">
+                           <tr><td>Latitude</td></tr>
+                           <strong><tr><td>{{marker.lat}}</td></tr></strong>
+                           <tr><td></td></tr>
+                        </div>
+                        <div class="site-row">
+                           <tr><td>Longitude</td></tr>
+                           <strong><tr><td>{{marker.lng}}</td></tr></strong>
+                           <tr><td></td></tr>
+                        </div>
+                        <div class="site-row">
+                           <tr><td>Location</td></tr>
+                           <strong><tr><td>{{marker.refAssetName}}</td></tr></strong>
+                        </div>
+                          
+                        </table>
+                   
+               </div>
+           </div>
+         </agm-info-window>
+      </agm-marker>
+   </div>
+</div>

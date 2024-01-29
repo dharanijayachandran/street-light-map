@@ -1,0 +1,57 @@
+agm-map {
+    height: 500px;
+ }
+ 
+label{
+    font-size: 14px;
+    color: rgb(148, 152, 155);
+}
+.panel.panel-inverse{
+    padding-left:10px;
+    padding-top:10px;
+}
+.h6, h6 {
+    font-size: 15px;
+}
+
+
+.si-content {
+    overflow:initial;
+}
+.container {
+    width: 100%;
+    height: 500px;
+}
+#editorTemplate{
+    width: 100%;
+    height: 500px;
+}
+
+.info{
+    width: 200px;
+    overflow: hidden;
+    padding-left: px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.rowBox_withOutBorderTop {
+    border-radius: var(--rowBox-border-radius);
+    -webkit-box-shadow: var(--rowBox-webkit-box-shadow);
+    box-shadow: var(--rowBox-box-shadow);
+    border-top-left-radius: var(--rowBox-border-top-left-radius);
+    border-top-right-radius: var(--rowBox-border-top-right-radius);
+    border: solid 1px var(--form-rowBox-border-color);
+    background-color: var(--form-rowBox-bg-color);
+    border-top: cornsilk;
+  }
+  .lefttopcorner{
+      margin: 8px;
+  }
+   .total{
+    margin: -3px;
+  } 
+  .totalcode{
+    margin: 6px;
+    font-size: initial;
+  }
+
